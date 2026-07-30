@@ -1,14 +1,17 @@
 {
-  "name": "finance-platform",
+  "name": "smart-spender",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "next start",
     "lint": "next lint",
     "email": "email dev",
     "postinstall": "prisma generate"
+  },
+  "engines": {
+    "node": ">=18.18.0"
   },
   "dependencies": {
     "@arcjet/next": "^1.0.0-alpha.34",
@@ -33,9 +36,10 @@
     "lucide-react": "^0.462.0",
     "next": "15.0.3",
     "next-themes": "^0.4.3",
+    "prisma": "^6.0.1",
     "react": "^19.0.0",
     "react-day-picker": "^8.10.1",
-    "react-dom": "^19.0.0-rc-66855b96-20241106",
+    "react-dom": "^19.0.0",
     "react-hook-form": "^7.53.2",
     "react-spinners": "^0.14.1",
     "recharts": "^2.14.1",
@@ -50,7 +54,6 @@
     "eslint": "^8",
     "eslint-config-next": "15.0.3",
     "postcss": "^8",
-    "prisma": "^6.0.1",
     "react-email": "3.0.3",
     "tailwindcss": "^3.4.1"
   }

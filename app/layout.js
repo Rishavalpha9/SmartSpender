@@ -11,6 +11,9 @@ export const metadata = {
   description: "One stop Finance Platform",
 };
 
+// Clerk/Header use cookies — must not be statically prerendered on Vercel
+export const dynamic = "force-dynamic";
+
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
